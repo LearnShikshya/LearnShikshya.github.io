@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shikshya</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Papyrus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body bgcolor="#FFFCF9">
+  <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <div class="space3"></div>
+    <a href="index.htm" class="w3-bar-item w3-button">Home</a>
+    <a href="learn_c.htm" onclick="w3_close()" class="w3-bar-item w3-button">Start Learning C</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+    <a href="intro.htm" class="w3-bar-item w3-button">A Thorough Introduction to C</a>
+    <a href="flow.htm" class="w3-bar-item w3-button">Flow Control in C</a>
+    <a href="arrays.htm" class="w3-bar-item w3-button">Arrays in C</a>
+    <a href="strings.htm" class="w3-bar-item w3-button">Strings in C</a>
+    <a href="func.htm" class="w3-bar-item w3-button">Functions in C</a>
+    <a href="structure.htm" class="w3-bar-item w3-button">Structure and Unions</a>
+    <a href="pointer.htm" class="w3-bar-item w3-button">Pointers in C</a>
+    <a href="file.htm" class="w3-bar-item w3-button">File Handling</a>
+  </nav>
+  <div class="navbar">
+    <div class="w3-button w3-padding-16 w3-left size" onclick="w3_open()">☰</div>
+    <div class="w3-center w3-padding-16 heading"><a href="index.htm">Shikshya</a></div>
+  </div>
+  <div class="space2"></div>
+  <div class="headline">Flow Control in C</div>
+  <div class="space4"></div>
+  <div class="subtitle">Euta Program saddhai siidha nadi jstai baghiraako huncha. Mtlb ki hamle ahile smma lekheko sabai program haru chai 1st Line baata Last line smma siiidhaaa baghirako huncha. Tara kaile kahin hamlai tyesto na chahina ni sakcha.  Kaile kahin hamlai euta condition anusar euta ani aarko condition anusar aarko kura dekhauna parney huna sakcha. Tei kura laai Flow Control vanincha. Hamle C ko Flow laai alter garera hamlai je garna mann laageko cha tyo garna milcha. Flow Control ko type haru chai tala ko anusar cha:</div>
+  <div class="space4"></div>
+  <ul>
+    <li><a href="#decision" class="list">Decision Control</a></li>
+    <li><a href="#loop" class="list">Loop Control</a></li>
+  </ul>
+  <div class="space5" id="decision"></div>
+  <div class="topic">Decision Control</div>
+  <div class="space5"></div>
+  <div class="subtitle">Mathi vaneko jstai hamle Decision Control le program ko flow lai alter garna sakcham. Decision Control le chai euta condition laai hercha. Tyo Condition true cha vaney euta section laai execute garcha, false cha vaney aarko laai garcha. Decision Control ko Simplest Form vaneko:</div>
+  <div class="space5"></div>
+  <div class="topic">if statement</div>
+  <div class="space5"></div>
+  <div class="subtitle"><b>FYI: Syntax vaneko euta function jstai if ko general structure jstai maaney huncha.</b></div>
+  <div class="space4"></div>
+  <div class="subtitle">Syntax: </div>
+  <div class="code">
+    <pre>
+
+if ( yo condition true vayo vaney ) {
+  yo line execute garney;
+}
+
+    </pre>
+  </div>
+  <div class="space4"></div>
+  <div class="subtitle">Yo if statement le garney vaneko chai yedi hamle diyeko condition true cha vaney tyo tala patti ko block of code laai execute garcha. Haina vaney kei ni gardaina tyo block of statement execute ni hudaina. Aba tyo condition vaneko chai ke ta? Tala table ma diyieko cha condition haru ke ke huun vanera.</div> 
+  <div class="space4"></div>
+  <div class="code">
+  <table>
+    <tr>
+      <td class="subtitle">Yo Expression</td><td class="subtitle">Yo Vayo vaney true huncha</td>
+    </tr>
+    <tr>
+      <td class="subtitle">x == y</td><td class="subtitle">x is equal to y</td>
+    </tr>
+    <tr>
+      <td class="subtitle">x != y</td><td class="subtitle">x is not equal to y</td>
+    </tr>
+    <tr>
+      <td class="subtitle">x &lt; y</td><td class="subtitle">x is less than y</td>
+    </tr>
+    <tr>
+      <td class="subtitle">x &gt; y</td><td class="subtitle">x is greater than y</td>
+    </tr>
+    <tr>
+      <td class="subtitle">x &lt;= y</td><td class="subtitle">x is less than or equal to y</td>
+    </tr>
+    <tr>
+      <td class="subtitle">x &gt;= y</td><td class="subtitle">x is greater than or equal to y</td>
+    </tr>
+  </table>
+</div>
+<div class="space4"></div>
+<div class="subtitle">Yaha baata sabai kura sajilai cha except tyo == ra !=. Aba tyo == laai = lekhna paaunna? Vanera sodhnu huncha vaney naai paaudaina. Khaas = vaneko variable declare garna ko laai matra ho ani == vaneko duita variable laai compare garna laai matra ho. So yo kura chai samjhina paryo. Ani != vaneko is not equal to ho tyo matra samjhinu ahile laai tyo vanda badi pachi aaudai garcha. Aba euta example program heram:</div>
+<div class="code">
+  <pre>
+
+#include &lt;stdio.h&gt;
+
+int main() {
+int a;
+printf("Enter a number less than 5");
+scanf("%d", &a);
+
+if (a &lt; 5) {
+printf("What a obedient fellow!");
+}
+return 0;
+}
+
+  </pre>
+</div>
+<div class="subtitle">Yo mathi ko example ma tyesto kei chaina bass euta number 'a' maagyo ani user le input garesi tyo number 5 vanda syaano cha vaney chai What a Obedient fellow! vanera output aauncha ani 5 vanda maathi vayo vaney kei ni aaudaina. Aba chai malai 5 vanda mathi ko aayo vaney chai kei aarkai output dekhauna mann laagyo reyy maanam. Tyo chai kasari garney ta? Tyellai chai:</div>
+<div class="space5"></div>
+<div class="topic">if-else statement</div>
+<div class="space5"></div>
+<div class="subtitle">Yelle chai tyakkai maile vaneko jsto garcha. Yesko Syntax chai:</div>
+<div class="code">
+  <pre>
+if ( yo condition true ho vaney) {
+  yo block execute garney
+} else {
+  (tyo condition false ho vaney)
+  yo block execute garney
+}
+  </pre>
+</div>
+<div class="subtitle">Aba tyo syntax self-explanatory cha. Euta example heresi majjale bujhincha:</div>
+<div class="code">
+  <pre>
+
+#include &lt;stdio.h&gt;
+
+int main() {
+  int a;
+  printf("Enter a number less than 5");
+  scanf("%d", &a);
+      
+  if (a &lt; 5) {
+    printf("What a obedient fellow!");
+  } else {
+    printf("You FIEND! Why didn't you obey me?");
+  }
+    return 0;
+}
+
+  </pre>
+</div>
+<div class="subtitle">Yo program ma ni tyestai tyestai vayeko ho. Bass aba mathi ko condition false cha vaney chai talla patti ko block execute huncha. Jstai maanam maile 7 input diye vaney chai You FIEND! wala aauncha tara maile 3 input diye vaney chai What a obedient waala aauncha.</div>
+<div class="space4"></div>
+<div class="subtitle">Hamle yetti thahapaayesi aba euta simple tara ekdamai important program lekhna sakcham. Tyo chai aba ahile nai lekhna try garnu. Answer chai tala Example Programs ma cha tara aafu le try garesi balla hernu hola</div>
+<div class="space4"></div>
+<div class="subtitle">Q: WAP to input two numbers and print which one is the greater one.</div>
+<div class="space4"></div>
+<div class="subtitle">Aba if-else ko aarko pani euta structure huncha. Yo chai:</div>
+<div class="code">
+  <pre>
+
+  if (yo condition true ho vaney) {
+    yo execute garney
+  } else if (yo condition true ho vaney) {
+    yo execute garney
+    .
+    .
+    .
+    .
+  } else {
+    (kunai ni true haina vaney)
+    yo execute garney
+  }
+
+  </pre>
+</div>
+<div class="subtitle">Yesma chai aba dheraiii condition haru laai use garney ho. Yo chai aba kaha use garincha vanera vanda kheri jstai percentage ko anusar Distinction, First Division tyesto lekhna laai use huncha. Tyo vanisakepachi tyei example diim na ta:</div>
+<div class="code">
+  <pre>
+
+#include &lt;stdio.h&gt;
+
+int main() {
+  float per;
+  printf("Enter Percentage: ");
+  scanf("%f", &per);
+      
+  if (per >= 80) {
+    printf("You got a Distinction!");
+  } else if (per >= 70) {
+    printf("You got First Division!");
+  } else if (per >= 60) {
+    printf("You got Second Division!");
+  } else {
+    printf("You got less than 60%");
+  }
+    return 0;
+}
+  </pre>
+</div>
+<div class="space4"></div>
+<div class="subtitle">Yo bujhna chai aba yesari heram.</div>
+<div class="space4"></div>
+<div class="subtitle">Suru ma ta if (per >= 80) wala condition check huncha. Tyo true cha vaney You got a Distinction wala execute huncha. Jstai hamle percentage 89 enter gareko chamm vaney chai You got a distinction vanney message aauncha ani <b>aru kura kei ni execute hudaina.</b>Sidhai talla patti jaancha ani program end huncha. Ani aba jstai maanam ki maile input 76 diyeko chu. Tyo bela chai aba first ko condition ta of course false ho tei vayera aba else ma jaancha ani tyo else ma aarko if cha tyaha chai hamro condition true vayeko cha. Tei vayera tyo First Division wala message print huncha ani <b>aru kura kei ni execute hudaina.</b> Program end huncha. Ani tyestai huncha tapai haru aafai pani try garnu yo.
+  Example Programs haru ma cha if-else-if ko aru example haru!</div>
+<div class="space5"></div>
+<div class="topic">Complex Decisions</div>
+<div class="space5"></div>
+<div class="subtitle">Kaile kahin hamlai euta matra condition le pugeko hudaina. La jstai euta exam mai aairakhney question ko example ligam na ta. Euta program lekham jaha chai 3ta Number input garna parcha ani 3ta madhye kun chai greatest ho print garna parney vayo vaney hamle ke garna milcha ta? 3ta Number input garna dherai gaaro kam vayena tara tyespachi ke garney ta? Logic kasto huncha socham ekchin laai.</div>
+<div class="space4"></div>
+<div class="subtitle">Pahila ta 3ta Number a, b, c ma sabse vanda thulo number kasari patta lagauney? Yedi a chai b ra c duitai vanda thulo cha vaney a sabai vanda thulo huncha. Tyesari nai aba b chai a ra c vanda thulo cha vaney b chai sabai vanda greatest number huncha. Ani c ma ni tyestai logic vayo. </div>
+<div class="space4"></div>
+<div class="subtitle">C Programming ma yesto chai lekhna paunna a > b > c. Tei vayera yesari garna mildaina. Kasari garney?
+  Aba hami padhchau Logical Operators haru ko barema.</div>
+<div class="space5"></div>
+<div class="topic">Logical Operators</div>
+<div class="space5"></div>
+<div class="subtitle">Class 11 ma padhnu vayeko hola hajur le AND Gate ra OR Gate ra NOT gate. Yei ho Logical Operators haru vaneko. 
+  <b>&&</b> vaneko <b>AND</b> Gate ho</div>
+<div class="subtitle"><b>||</b> vaneko <b>OR</b> Gate ho</div>
+<div class="subtitle"><b>!</b> vaneko <b>NOT</b> Gate ho</div>
+<div class="space4"></div>
+<div class="subtitle">&& le chai yedi sabai condition haru true cha vaney matra true output dincha. Tara euta matra condition ni false cha vaney purai False huncha. Hamle yo mathi ko program lekhna yo use garcham</div>
+<div class="space4"></div>
+<div class="subtitle">|| le chai yedi sabai condition haru madhye euta ki euta vanda badi true cha vaney true output dincha. Tara sabai false cha vaney chai false output dincha.</div>
+<div class="space4"></div>
+<div class="subtitle">! le chai True laai false banauncha ra False laai true banauncha.</div>
+<div class="space4"></div>
+<div class="subtitle">Aba Maathi ko Program lekham ra yo example le thaha huncha yo Logical Operators kasari use garney vanera.</div>
+<div class="code">
+  <pre>
+
+#include &lt;stdio.h&gt;
+
+int main() {
+  int a, b, c;
+  printf("Enter three numbers: ");
+  scanf("%d %d %d", &a, &b, &c);
+
+  if (a > b && a > c) {
+    printf("%d is the greatest number", a);
+  } else if (b > a && b > c) {
+    printf("%d is the greatest number", b);
+  } else {
+    printf("%d is the greatest number", c):
+  }
+
+return 0;
+}
+
+  </pre>
+</div>
+<div class="subtitle">Aba yaha mathi ke vairakheko cha vaney, suru ko condition heram ( a > b && a > c ). Yesma chai duita condition haru cha ra duita condition ko bich ma euta and rakhiyeko cha. And nai kina rakhiyeko vanda alli sochna parcha. A greatest huney vaneko ta A chai b vanda thulo ANI c vanda ni thulo ta hunai paryo ni ta? Tei vayera hamle and use gareko. Ani tyo duitai condition true huncha vaney ta hamlai thaha huncha ni ta a nai sabai vanda thulo ho vanera tei vayera ani tyaha a is greatest vanera print gareko. (Tyaha a is greatest lekhnu vanda ni kun chai number greatest ho dekham vanera a ko value print gareko)</div>
+<div class="space4"></div>
+<div class="subtitle">Ani else if ma pani b greatest cha ki nai vanera check garney. Ani a ni thulo chaina ra b ni thulo chaina vaney ofc c matra ta thulo huncha ta. Tei vayera else use garera c thulo huncha vanera lekheko.</div>
+<div class="space4"></div>
+<div class="subtitle">Aba aarko ni euta Example heram. Yashavant Kanetkar ko "Let Us C" vanney book ma euta ekdamai ramro question cha tyo question Try garam na ta.</div>
+<div class="code">
+  <pre>
+
+Q. A certain grade of steel is graded according to the following conditions: 
+i. Hardness must be greater than 50
+ii. Carbon content must be less than 0.7
+iii. Tensile strength must be greater than 5600
+
+The grades are as follows:
+
+Grade is 10 if all three conditions are met
+Grade is 9 is conditions (i) and (ii) are met
+Grade is 8 if conditions (ii) and (iii) are met
+Grade is 7 if conditions (i) and (iii) are met
+Grade is 6 if only one condition is met
+Grade is 5 if none of the conditions are met.
+
+WAP, which will require the user to give values of hardness, carbon content and tensile strength of the steel under consideration and output the grade of the steel.
+  
+</pre>
+</div>
+<div class="subtitle">Aba yo question herda laamo dekhincha tara tyesto gaaro chaina. Yo garna try garam ani Operator haru kasari use garney alikati bujhincha. Pahila ta hamle hardness, carbon content ra tensile strength user snga maagna paryo. Ani sabai condition haru check garera tyo anusar hamle condition haru banayera Steel ko grade patta lagauna paryo. Aba sabai conditions check gararm.</div>
+<div class="space4"></div>
+<div class="subtitle">Let's assume ki hardness h ho, carbon content c ho ani tensile strength t ho</div>
+<div class='space4'></div>
+<div class="subtitle">Grade is 10 if all three conditions are met.</div>
+<div class="space4"></div>
+<div class="subtitle">So sabai condition meet huna paryo. Yeslai aba tintai condition haru true huna paryo. Tei vayera hamro condition ma && use garna parney vayo:</div>
+<div class="code"><pre> (h > 50 && c &lt; 0.7 && t > 5600)</pre></div>
+<div class="subtitle">Grade is 9 if conditions (i) and (ii) are met.</div>
+<div class="space4"></div>
+<div class="subtitle">Aba yesma chai duita condition matra herney ho. Tara vaako duita condition ma ni duitai true huna parcha tei vayera && nai use garna paryo: </div>
+<div class="code"><pre> (h > 50 && c &lt; 0.7)</pre></div>
+<div class="subtitle">Grade is 8 if conditions (ii) and (iii) are met.</div>
+<div class="space4"></div>
+<div class="subtitle">Yesma ni hamle duita matra condition herney ani duitai true huna parney vayeko le && lekhna paryo:</div>
+<div class="code"><pre> (c &lt; 0.7 && t > 5600) </pre></div>
+<div class="subtitle">Grade is 7 if conditions (i) and (iii) are met.</div>
+<div class="space4"></div>
+<div class="subtitle">Yesma ni tyestai nai vayo.</div>
+<div class="code"><pre> (h > 50 && t > 5600) </pre></div>
+<div class="subtitle">Grade is 6 if only one condition is met.</div>
+<div class="space4"></div>
+<div class="subtitle">Aba yesma chai aayo aarko. If only one condition is met vaneko cha tyesko matlab kun chai logical operator use garda thik hola? Of course, || (OR) use garna parney vayo. Tintai condition ma euta true vayo vaney Grade 6 huney vayo:</div>
+<div class="code"><pre> (h > 50 || c &lt; 0.7 || t > 5600) </pre></div>
+<div class="subtitle">Grade is 5 if none of the conditions are met.</div>
+<div class="space4"></div>
+<div class="subtitle">Yo vaneko aba else case vayo.</div>
+<div class="space4"></div>
+<div class="subtitle">Purai Program lekham aba:</div>
+<div class="code">
+  <pre>
+
+  #include &lt;stdio.h>
+
+  int main() {
+  int h, t;
+  float c;
+
+  printf("Enter hardness, carbon content and tensile strength of the steel: ");
+  scanf("%d %f %d", &h, &c, &t);
+
+  if (h > 50 && c &lt; 0.7 && t > 5600) {
+
+  printf("The Grade is 10");
+
+  } else if (h > 50 && c &lt; 0.7) {
+
+  printf("The Grade is 9");
+
+  } else if (c &lt; 0.7 && t > 5600) {
+
+  printf("The Grade is 8");
+
+  } else if (h > 50 && t > 5600) {
+
+  printf("The Grade is 7");
+
+  } else if (h > 50 || c &lt; 0.7 || t > 5600) {
+
+  printf("The Grade is 6");
+
+  else {
+
+  printf("The Grade is 5");
+
+  }
+
+  return 0;
+  }
+
+  </pre>
+</div>
+<div class="subtitle">See? It wasn't too bad. Aru example haru Example Programs ma chann.</div>
+<div class="space5"></div>
+<div class="topic">switch-case</div>
+<div class="space5"></div>
+<div class="subtitle">Yo part testo important chaina tara exam ma aauna sakney vayeko le alikati matra vaye ni vanna parcha. Switch Case le chai euta variable lincha ani tyo variable ko dherai case haru hercha. Mtlb ki euta variable ko value 1 cha vaney yo garney vancha haina 2 cha vaney aarko garr vancha.</div>
+<div class="space4"></div>
+<div class='subtitle'>Syntax: </div>
+<div class="code">
+  <pre>
+
+switch (variable) {
+  case constant1:
+  [Block of Code]
+  break;
+  
+  case constant2:
+  [Block of Code]
+  break;
+  
+  .
+  .
+  .
+  .
+  
+  default:
+  [Else Case]
+}
+
+  </pre>
+</div>
+<div class="subtitle">Yo chai euta main menu banauna use garincha dherai. Jstai euta Calculator ko jstai example heram:</div>
+<div class="code">
+  <pre>
+
+  #include &lt;stdio.h>
+
+  int main() {
+  int a, b, ch, result;
+
+  printf("Enter any two numbers: ");
+  scanf("%d %d", &a, &b);
+
+  printf("\n Enter a Operation");
+  printf("\n1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division \n");
+  scanf("%d", &ch);
+
+  switch(ch) {
+
+  case 1:
+  result = a+b;
+  break;
+
+  case 2:
+  result=a-b;
+  break;
+
+  case 3:
+  result = a * b;
+  break;
+
+  case 4:
+  result = a / b;
+  break;
+
+  default:
+  printf("\n Wrong Choice. The Result will thus be a random number.");
+  }
+
+  printf("\n The Result is: %d", result);
+
+  return 0;
+  }
+
+  </pre>
+</div>
+<div class="subtitle" id="loop">Yo ta yetikai herda kheri ni bujhincha.  Yo Program run garda kheri number haalepachi euta menu jsto aauncha ani tyo menu ma maanam maile 1 dabaye vaney first ko case execute huncha. Haina 3 enter garey vaney 3rd Case Execute huncha. Tei ho. Testo important chaina yo tara kei project banauda kheri kaam laagna sakcha so dimag ma rakhirakheko ramro.</div>
+<div class="space5"></div>
+<div class="topic">Loop Control</div>
+<div class="space5"></div>
+</body>
+</html>
+
+<script>
+    // Script to open and close sidebar
+  
+    
+  
+    function w3_open() {
+      if(document.getElementById("mySidebar").style.display == "none") {
+        document.getElementById("mySidebar").style.display = "block";
+      } else {
+        document.getElementById("mySidebar").style.display = "none"
+      }
+    }
+  </script>
