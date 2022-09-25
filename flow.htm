@@ -412,6 +412,73 @@ switch (variable) {
 <div class="space5"></div>
 <div class="topic">Loop Control</div>
 <div class="space5"></div>
+<div class="subtitle">Aarko Flow lai control garna milney concept vaneko Loop Control ho. Loop vaneko Programming ma sabai vanda important concept ho. Loop haru Game ma sabai vanda badi use vairakheko huncha. Jstai maanam ki malai 1 dekhi 5 smma number haru print garna mann laagyo. Aba euta tarika ta:</div>
+<div class="code">
+  <pre>
+  #include &lt;stdio.h&gt;
+
+  int main() {
+  printf("1 \n 2 \n 3 \n 4 \n 5");
+  return 0;
+  }
+  </pre>
+</div>
+<div class="subtitle">5 smma ta thikai cha. Tara la maanam ki malai 100 smma print garna mann laagyo. Ki ta 1000 smma laagyo rey. Aba tyo bela ni hamle yesari nai lekhera basirakhney ta? Haina. Tyei bela hamlai looping kaam laagcha. Looping vaneko chai euta condition meet na huunjel smma eutai statement haru repeat garney ho. Aba yesto garesi kasari kaam laagcha ta aginai vaneko scenario ma? Pahila Loop ko euta type heram ani tyespachi thaha huncha.</div>
+<div class="space5"></div>
+<div class="topic">while loop</div>
+<div class="space5"></div>
+<div class="subtitle">Syntax:</div>
+<div class="code">
+  <pre>
+  while (condition) {
+    // block of code to be looped
+  }
+  </pre>
+</div>
+<div class="subtitle">Aba yo while loop vaneko k ta? while loop le euta condition laai hercha. Ani jati berr smma tyo condition true huncha tyeti berr smma tyaha vaako block of code laai tyo execute garirakhcha. Aba haamlai kasari kaam laagney vayo ta yo? Euta Example heriyo vaney bujhincha:</div>
+<div class="code">
+  <pre>
+  #include &lt;stdio.h&gt;
+
+    int main() {
+    int i=1;
+    
+    while (i &lt;= 10) {
+    printf("%d \n", i);
+    i = i + 1;
+    }
+    return 0;
+    }
+  </pre>
+</div>
+<div class="subtitle">Yaha ke vairakheko cha ta? Pahila ta euta variable declare garney. Yo variable ma hamle aafno number store garcham ani chaiyeko anusar tyesma operation garcham. Hamle yo variable lai counter variable vancham ra yo usually i lekhincha tara je lekhda ni huncha. Aba suru ma while ko condition heram. <b>(i &lt;= 10)</b> Yo condition ta ahile true cha ni ta? i ko value ahile 1 cha ni ta. Tei vayera tyo tala patti ko printf aba execute huncha. Aba suru ma 1 print vayo. Tyespachi i ko value 1 le increase vaako cha <b>i = i + 1</b> le garda. Aba feri maathi gayo kina vaney while vaneko loop ho euta. Ahile ni condition true cha kina vaney i ko value aba 2 cha. Ani aba i print huncha mtlb 2 print vayo ani feri euta value badyo ani i ko value 3 vayo. Tyesari 3 print vayo 4 ni vayo ani tyesto huda huda 9 smma print vayo maanam. Aba i ko value 10 cha. 10 ma ni condition true cha tei vayera 10 ni print huncha. Jstai condition ma <b>(i &lt; 10)</b> vaako vaye chai i ko value 10 vaako vaye condition false hunthyo ani 10 chai print hunthyena. Aba condition false vayepachi loop exit huncha ani return 0 ma gayera program exit huncha.</div>
+<div class="space4"></div>
+<div class="subtitle"><b>NOTE: Condition ma Logical Operators jstai && ra || pani use garna milcha.</b></div>
+<div class="space5"></div>
+<div class="topic">Common Trap in a Loop</div>
+<div class="space5"></div>
+<div class="subtitle">Hamle Loop kati choti execute vaako cha count garna laai euta counter variable banauncham. Ani usually tyo counter variable mai condition raakhna parney huncha. Tara tyo counter variable ko condition rakhera counter variable lai kei form le change garna birsina vayena. Jstai ki yo program ma:</div>
+<div class="code">
+  <pre>
+  #include &lt;stdio.h&gt;
+
+  int main() {
+  int i = 1;
+  
+  while (i &lt;= 10) {
+  printf("%d \n", i);
+  }
+  return 0;
+  }
+</pre>
+</div>
+<div class="subtitle">Yo Program ma chai hamle euta condition rakheko cham ani tyo condition chai program jati run vaye ni change huney waala chaina. Kina vaney tyo variable lai hamle kei change garekai chainam. Yesto vayo vaney euta infinite loop bancha ani tyo program execute vaako vai vaako vai vaako vai vairakhcha. Vanesi yeti chai samjhina paryo ki while loop ma euta yesto condition huna paryo jaha chai tyo condition kunai point of time ma false huncha natra vaye tyo euta infinite loop bancha.</div>
+<div class="space5"></div>
+<div class="topic">Tips for Loops</div>
+<div class="space5"></div>
+<div class="topic">Tips for Loops</div>
+<div class="space5"></div>
+<div class="subtitle">Euta Loop ma counter variable lai increase nai garna parcha vanney haina. Decrease pani garna milcha. Yo chai hami number haru reverse order ma print garna paryo vaney garcham. </div>
 </body>
 </html>
 
