@@ -25,6 +25,8 @@
   <div class="space2"></div>
   <div class="headline">Flow Control in C</div>
   <div class="space4"></div>
+  <a class="subtitle" href="flowcontrol.pdf" download>Download the PDF</a>
+  <div class="space4"></div>
   <div class="subtitle">Euta Program saddhai siidha nadi jstai baghiraako huncha. Mtlb ki hamle ahile smma lekheko sabai program haru chai 1st Line baata Last line smma siiidhaaa baghirako huncha. Tara kaile kahin hamlai tyesto na chahina ni sakcha.  Kaile kahin hamlai euta condition anusar euta ani aarko condition anusar aarko kura dekhauna parney huna sakcha. Tei kura laai Flow Control vanincha. Hamle C ko Flow laai alter garera hamlai je garna mann laageko cha tyo garna milcha. Flow Control ko type haru chai tala ko anusar cha:</div>
   <div class="space4"></div>
   <ul>
@@ -674,10 +676,127 @@ switch (variable) {
 <div class="topic">Complicated Forms of Loops</div>
 <div class="space5"></div>
 <div class="subtitle">Yo part chai exam ko point of view ma tyesto important ta chaina tara Loop bujhna ko laai ekdamai important cha. Pahila ta </div>
+<div class='space5'></div>
+<div class='topic'>Nested Loop</div>
+<div class='space5'></div>
+<div class='subtitle'>Yo Loop chai pattern haru ma use huncha badi. Nested Loop vaneko chai euta loop ko vitra aarko loop ho. Jstai ki euta pattern banauna try garam:</div>
+<div class="code">
+  <pre>
+  1
+  1 2
+  1 2 3
+  1 2 3 4
+  1 2 3 4 5
+  </pre>
+</div>
+<div class="code">
+  <pre>
+  #include &lt;stdio.h&gt;
+
+  int main() {
+
+  for(int i=1; i&lt;=5; i++) {
+
+  for (int j=1; j&lt;=i; j++) {
+  printf("%d ", j);
+  }
+
+  printf("\n");
+  }
+
+  return 0;
+  }
+  </pre>
+</div>
+<div class="subtitle">Aba yaha chai ke vairakheko cha ta? Pahila ta suru ko loop laai heram.  Yesma pahila ta i ko value 1 cha hai ani tala gayera aarko j wala loop ma pasya cha. Aba yaha j 1 baata suru vayera i smma jaancha tyo condition j<=i vaako vayera. Mtlb ahile i vaneko ta 1 cha tei vayera j ko value 1 matra huncha ahile laai ani 1 print huney vayo. Tyesari aba tala patti line change garna paryo kina vaney 1 print garesi tyaha pattern ma line change vaako cha tei vayera \n lekheko. Ani aba first loop sakkyo ani i ko value aba 2 vayo. Ani j ko loop ma pugesi j 2 smma jaaney vayo ani 1 ra 2 print huney vayo. Tyesari nai loop hudai jaancha hudai jaancha ani mathi ko pattern print huncha.</div>
+<div class="space4"></div>
+<div class="subtitle">Aarko euta pattern ko garam aba:</div>
+<div class="code">
+  <pre>
+  1
+  2 2
+  3 3 3
+  4 4 4 4
+  5 5 5 5 5
+  </pre>
+</div>
+<div class="subtitle">Yo ni aginai jstai nai ho tara yesma key chai ke ho vaney tyo heram ta. 2nd line ma 2 matra cha. Vanesi tyo second line ma ta hamro i ko value ni 2 huncha. Hamle aginai print garney bela i gareko thyem ahile chai j garna paryo tyeti matra ho difference.</div>
+<div class="code">
+  <pre>
+  #include &lt;stdio.h>
+
+  int main() {
+
+  for(int i=1; i&lt;=5; i++) {
+
+  for (int j=1; j&lt;=i; j++) {
+  printf("%d ", i);
+  }
+
+  printf("\n");
+  }
+
+  return 0;
+  }
+  </pre>
+</div>
+<div class="space5"></div>
+<div class="topic">Loop Interruption</div>
+<div class="space5"></div>
+<div class="subtitle">Yo pani tyesto important chaina programming ko sense ma tara kaile kahin exam ma definition sodhna sakcha tei vayera bujhera chai basda ramro.</div>
+<div class='space5'></div>
+<div class="topic">break</div>
+<div class="space5"></div>
+<div class="subtitle">Euta Loop lai alli chito exit garna paryo vaney hami break use garcham. Jstai ki aba:</div>
+<div class="code">
+  <pre>
+  #include &lt;stdio.h>
+
+  int main() {
+
+  for(int i=1; i&lt;=10; i++) {
+  printf("%d \n", i);
+
+  if (i >= 5) {
+  break;
+  }
+
+  }
+
+  return 0;
+
+  }
+  </pre>
+</div>
+<div class="subtitle">Aba yaha chai tyo break le garda 5 print vayesi loop terminate huncha. </div>
+<div class="space5"></div>
+<div class="topic">continue</div>
+<div class="space5"></div>
+<div class="subtitle">continue le chai euta loop cycle laai skip garney kaam garcha. Jstai ahile loop ko value 2 huda kheri continue statement aayo vaney tyo 2 lai skip garera sidha 3 ma jaancha.</div>
+<div class="code">
+  <pre>
+  #include &lt;stdio.h>
+
+  int main() {
+
+  for(int i=1; i&lt;=10; i++) {
+
+  if (i == 2) {
+  continue;
+  }
+
+  printf("%d \n", i);
+
+  }
+
+  return 0;
+  }
+  </pre>
+</div>
 </body>
 </html>
 
-<script>
+<script src="script.js">
     // Script to open and close sidebar
   
     
