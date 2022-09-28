@@ -412,6 +412,98 @@ switch (variable) {
 </div>
 <div class="subtitle" id="loop">Yo ta yetikai herda kheri ni bujhincha.  Yo Program run garda kheri number haalepachi euta menu jsto aauncha ani tyo menu ma maanam maile 1 dabaye vaney first ko case execute huncha. Haina 3 enter garey vaney 3rd Case Execute huncha. Tei ho. Testo important chaina yo tara kei project banauda kheri kaam laagna sakcha so dimag ma rakhirakheko ramro.</div>
 <div class="space5"></div>
+<div class="topic">Examples of Decision Control Questions</div>
+<div class="space5"></div>
+<div class="subtitle">WAP to find the smallest number among three numbers.</div>
+<div class="code">
+  <pre>
+  #include &lt;stdio.h>
+
+  int main() {
+  int a, b, c;
+
+  printf("Enter any three numbers: ");
+  scanf("%d %d %d", &a, &b, &c);
+
+  if (a &lt; b && a &lt; c) {
+  printf("%d is the smallest", a);
+  } else if (b &lt; a && b &lt; c) {
+  printf("%d is the smallest", b);
+  } else {
+  printf("%d is the smallest", c);
+  }
+  return 0;
+  }
+  </pre>
+</div>
+<div class="subtitle">WAP to find the middle number among three numbers</div>
+<div class="code">
+  <pre>
+  #include &lt;stdio.h>
+
+  int main() {
+      int a, b, c;
+      printf("Enter any three numbers: ");
+      scanf("%d %d %d", &a, &b, &c);
+      
+      if (a > b && a &lt; c || a > c && a &lt; b) {
+          printf("%d is in the middle", a);
+      } else if (b > a && b &lt; c || b &lt; a && b > c) {
+          printf("%d is in the middle", b);
+      } else if (c > a && c &lt; b || c &lt; a && c > b) {
+          printf("%d is in the middle", c);
+      }
+      return 0;
+  }
+  </pre>
+</div>
+<div class="subtitle">WAP to find the age group on the basis of:</div>
+<div class="space4"></div>
+<div class="code">
+<table>
+  <tr>
+    <td class="subtitle">Age</td><td class="subtitle">Group</td>
+  </tr>
+  <tr>
+    <td class="subtitle">0-12</td><td class="subtitle">Child</td>
+  </tr>
+  <tr>
+    <td class="subtitle">13-19</td><td class="subtitle">Teenage</td>
+  </tr>
+  <tr>
+    <td class="subtitle">20-40</td><td class="subtitle">Adult</td>
+  </tr>
+  <tr>
+    <td class="subtitle">41 and above</td><td class="subtitle">Old</td>
+  </tr>
+</table>
+</div>
+<div class="code">
+  <pre>
+  #include &lt;stdio.h>
+
+  int main() {
+  int age;
+
+  printf("Enter age: ");
+  scanf("%d", &age);
+
+  if (age >= 0 && age &lt;= 12) {
+  printf("Your Age Group is Child");
+  } else if (age >= 13 && age &lt;= 19) {
+  printf("Your Age Group is Teenage");
+  } else if (age >= 20 && age &lt;= 40) {
+  printf("Your Age Group is Adult");
+  } else if (age >= 41) {
+  printf("Your Age Group is Old");
+  } else {
+  printf("Invalid Input");
+  }
+  return 0;
+  }
+  </pre>
+</div>
+<div class="space5"></div>
 <div class="topic">Loop Control</div>
 <div class="space5"></div>
 <div class="subtitle">Aarko Flow lai control garna milney concept vaneko Loop Control ho. Loop vaneko Programming ma sabai vanda important concept ho. Loop haru Game ma sabai vanda badi use vairakheko huncha. Jstai maanam ki malai 1 dekhi 5 smma number haru print garna mann laagyo. Aba euta tarika ta:</div>
