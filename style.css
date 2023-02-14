@@ -78,7 +78,7 @@
         }
         
         .navbar{
-          background-color: rgb(6, 214, 160);
+          background-color: #1f487e;
           z-index: 10000;
            position: fixed;
            top: 0px;
@@ -92,17 +92,22 @@ ul {
 
 a:link {
   text-decoration: none;
-  color: #219ebc;
+  color: #ef9cda;
+}
+
+a.top:link {
+  text-decoration: none;
+  color: #829cbc;
 }
 
 a:visited {
   text-decoration: none;
-  color: rgb(252, 119, 83);
+  color: #829cbc;
 }
 
 a:hover {
   text-decoration: none;
-  color:#5e60ce;
+  color:#01161e;
 }
 
 a:active {
@@ -146,7 +151,7 @@ a {
 
 pre{
     border-radius: 25px;
-    border: 2px solid rgb(252, 119, 83);
+    border: 2px solid #ef233c;
     overflow-x: auto;
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
@@ -169,10 +174,15 @@ pre{
     padding-left: 25px;
     padding-right: 25px;
   }
+
+  pre {
+    font-size: 12px;
+  }
+
 }
 
 a.button {
-  background-color: rgb(6, 214, 160);
+  background-color: #1f487e;
   padding: 14px 25px;
   text-align: center;
   text-decoration: none;
@@ -180,7 +190,7 @@ a.button {
 }
 
 a.button:hover {
-  background-color: #3674a9;
+  background-color: #409fc4;
 }
 
 
