@@ -24,6 +24,8 @@
           line-height: 1.2;
           font-size:60px; 
         }
+
+
         
         @media screen and (max-width: 1189px) {
           .headline {
@@ -40,6 +42,8 @@
           padding-right:100px;
         }
         */
+
+        
         
         /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
           @media screen and (min-width: 601px) {
@@ -48,6 +52,7 @@
             font-family:Verdana, Geneva, Tahoma, sans-serif;
             padding-left: 25px;
             padding-right:250px;
+            overflow: hidden;
           }
         }
         
@@ -58,6 +63,7 @@
             font-family:Verdana, Geneva, Tahoma, sans-serif;
             padding-left: 25px;
             padding-right:25px;
+            overflow: hidden;
           }
         }
         
@@ -138,6 +144,7 @@ a {
     font-size: 24px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
+
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
@@ -187,6 +194,7 @@ a.button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  border-radius: 25px;
 }
 
 a.button:hover {
@@ -199,6 +207,7 @@ a.button:hover {
     aspect-ratio: 16 / 9;
     width: 25%;
   }
+
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
@@ -208,6 +217,67 @@ a.button:hover {
     width: 75%;
   }
 }
+
+@media screen and (min-width: 800px) {
+
+  .girl {
+    padding-right: 75px;
+    padding-top: 50px;
+    max-width: 25%;
+    height: auto;
+  }
+
+  .headline2 {
+    padding-left: 25px;
+    padding-right:125px;
+    font-style: bold;
+    font-family: "Anton";
+    line-height: 1.2;
+    font-size:60px; 
+  }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 799px) {
+
+  .girl {
+    padding-top: 50px;
+    max-width: 30%;
+    height: auto;
+  }
+
+  .headline2 {
+    padding-left: 25px;
+    padding-right:25px;
+    font-style: bold;
+    font-family: "Anton";
+    line-height: 1.2;
+    font-size:6vw; 
+  }
+
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+
+  .girl {
+    padding-top: 50px;
+    max-width: 50%;
+    height: auto;
+    
+  }
+
+  .headline2 {
+    padding-left: 25px;
+    padding-right:25px;
+    font-style: bold;
+    font-family: "Anton";
+    line-height: 1.2;
+    font-size:6vw; 
+  }
+
+}
+
 
 .image {
   max-width: 5%;
@@ -256,4 +326,8 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+.fill {
+  background-color: red;
 }
