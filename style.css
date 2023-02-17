@@ -7,6 +7,7 @@
 
         body {
           padding-bottom: 50px;
+          background-color: #ebeef2;
         }
 
         .heading {
@@ -159,6 +160,7 @@ a {
 pre{
     border-radius: 25px;
     border: 2px solid #ef233c;
+    background-color: #ffffff;
     overflow-x: auto;
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
@@ -326,6 +328,10 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
 }
 
 .fill {
