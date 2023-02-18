@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shikshya</title>
+  <title>Shikshya - Arrays in C</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Papyrus&display=swap" rel="stylesheet">
@@ -122,19 +122,192 @@
     }
   </pre>
 </div>
+<div class="subtitle">Aba hamle yaha euta for loop setup gareko cham. Array ko [] vitra huney vaneko ta 0 dekhi 4 ho ni ta tei vayera yaha loop kaam laagyo. Ani 0 dekhi 4 samma huney vaako vayera nai hamle initialize garda i ko value laai 0 gareko cham ani last ko value laai 4 raakheko cham (5 raakhney ho vaney chai < 5 raakhda huncha). Ani tala scanf ma marks[i] vayesi suru ma 0 ma data entry huney vayo, tyespachi 1 ma, tyespachi 2 ma ani tyestai vairakhcha.</div>
+<div class="space5"></div>
+<div class="subtitle">Aba maanam ki maile input chai 100, 200, 300, 400 ra 500 diye vaney hamro array yesto huncha:</div>
+<div class="code">
+  <table class="w3-table">
+    <tr>
+      <td class="subtitle">marks[0]</td>
+      <td class="subtitle">marks[1]</td>
+      <td class="subtitle">marks[2]</td>
+      <td class="subtitle">marks[3]</td>
+      <td class="subtitle">marks[4]</td>
+    </tr>
+    <tr>
+      <td class="subtitle">100</td>
+      <td class="subtitle">200</td>
+      <td class="subtitle">300</td>
+      <td class="subtitle">400</td>
+      <td class="subtitle">500</td>
+    </tr>
+  </table>
+</div>
+<div class="space5"></div>
+<div class="topic">Data Reading in Array</div>
+<div class="space5"></div>
+<div class="subtitle">Yo section ley hamro data reading laai handle gareko cha:</div>
+<div class="code">
+  <pre>
+
+    for (int i=0; i&lt;=4; i++) {
+      printf("%d \n", marks[i]);
+    }
+  </pre>
+</div>
+<div class="subtitle">Yo ta tapai ley yetikai nai bujhnu vayo hola. for loop 0 dekhi 4 samma setup gariyo ani tii sabai laai print gardiyo marks[i] use garera.</div>
+<div class="space5"></div>
+<div class="subtitle">Aba aginai jastai input vayeko ho vaney chai hamro output yesto aauncha:</div>
+<div class="code">
+  <pre>
+
+    100 
+    200
+    300
+    400
+    500
+  </pre>
+</div>
+<div class="subtitle">Ani yo number haru vaneko chai:</div>
+<div class="code">
+  <pre>
+
+    100 -> marks[0]
+    200 -> marks[1]
+    300 -> marks[2]
+    400 -> marks[3]
+    500 -> marks[4]
+  </pre>
+</div>
+<div class="subtitle">Aba alikati example haru garam ani tyespachi array ko barema extra kura haru padhamla:</div>
+<div class="space5"></div>
+<div class="subtitle">Q. Twenty-five numbers are entered from keyboard into an array. The number to be searched is entered through the keyboard by the user. Write a program to find if the number to be searched is present in the array and if it is present, display the number of times it appears in the array. (Let Us C - Yashavant Kanetkar)</div>
+<div class="space5"></div>
+<div class="subtitle">Pahila program lekhchu ani bujhaunchu:</div>
+<div class="code">
+  <pre>
+
+    #include &lt;stdio.h&gt;
+
+    int main() {
+        int numbers[25], search_num, count=0;
+        
+        for (int i=0; i&lt;=24; i++) {
+            printf("Enter a number: ");
+            scanf("%d", &numbers[i]);
+        }
+        
+        printf("\n Enter the number to be searched: ");
+        scanf("%d", &search_num);
+        
+        for (int i=0; i&lt;=24; i++) {
+            if (numbers[i] == search_num) {
+                count++;
+            }
+        }
+        
+        printf("The number of times %d appeared in the array is: %d", search_num, count);
+    
+        return 0;
+    }
+  </pre>
+</div>
+<div class="subtitle">Aba yo program ma ke vairako cha ta? Suru ma ta maile euta numbers vanney array laai declare garey ani question anusaar 25 tyesko range banaye. Ani aarko euta variable banaye jasma chai tyo search garney number huncha, ani kati ota number aayo ta vanera count garna count vanney variable banaye. Ani kina vaney count counter variable ho suru ma 0 initialize garna paryo (Garbage value na aaos vanera).</div>
+<div class="space5"></div>
+<div class="subtitle">Suru ko for loop ta tyesto gaaro vayena aginai nai bujheko ho just number haru input gareko ho hamro array ma.</div>
+<div class="space5"></div>
+<div class="subtitle">Aba tyo loop sakkey pachi chai kun number search garney vanera user laai sodheko chu.</div>
+<div class="space5"></div>
+<div class="subtitle">Second for loop ma chai heram aba. Pahila ta sabai array ko element haru laai access garna laai for loop intialize gariyo 0 dekhi 24 samma. Ani aba harek element ma check garney tyo search number sanga equal cha ki chaina vanera, ani equal cha vaney chai counter laai badhauney, chaina vaney ta kei garnai parena.</div>
+<div class="space5"></div>
+<div class="subtitle">Q. Write a program to find the greatest and smallest number in an array.</div>
+<div class="code">
+  <pre>
+    #include &lt;stdio.h&gt;
+
+    int main() {
+        int numbers[5], max, min;
+    
+        for (int i=0; i&lt;=4; i++) {
+            printf("Enter numbers: ");
+            scanf("%d", &numbers[i]);
+        }
+    
+        max = numbers[0];
+        min = numbers[0];
+    
+        for (int i=1; i&lt;=4; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+    
+            if (numbers[i] &lt; min) {
+                min = numbers[i];
+            }
+    
+        }
+    
+        printf("\n The Greatest Number is: %d \n The Smallest Number is: %d", max, min);
+    
+        return 0;
+    }
+  </pre>
+</div>
+<div class="subtitle">Pahila ta maile numbers vanney array banaye, ani greatest ra smallest number store garna laai max ra min variable banaye. Suru ko for loop samma ta simple nai vayo.</div>
+<div class="space5"></div>
+<div class="subtitle">Tyespachi maile max ra min laai numbers ko suru ko value diyeko chu. Aba maile tyo suru ko value laai aarko second value sanga compare garchu for loop use garera. Aba max ko case ma chai second value chai first value vanda thulo cha vaney max laai maile tyo thulo value matlab tei numbers[i] ley replace gardinchu, ani aarko step ma ni tyestai huncha second value laai third value ley compare garcha ani thulo cha vaney replace gardincha, ani tyesto vairakhyo vaney last ma gayera max ma greatest number store vayera bascha.</div>
+<div class="space5"></div>
+<div class="subtitle">Smallest Number ni tyestai nai vayo. Suru ko value laai second ko value sanga compare garda second ko value smaller cha vaney smaller value laai min ma haaldiney, ani tei loop vairakhyo vaney last ma gayera  min ma smallest value bascha.</div>
+<div class="space5"></div>
+<div class="topic">More on Arrays</div>
+<div class="space5"></div>
+<div class="subtitle">Array ko barema alikati ajhai features ra downfall ko baarema bujham.</div>
+<div class="space5"></div>
+<div class="topic">Array Initialization</div>
+<div class="space5"></div>
+<div class="subtitle">Aginai hamle array haru declare garda kheri user input maagera nai value haru raakheko thyem. Tara hamle aafai value raakhna ni milcha. Tyo garna laai:</div>
+<div class="code">
+  <pre>
+
+    int num[6] = {2, 4, 6, 8, 10, 12}
+  </pre>
+</div>
+<div class="subtitle">Aba hamle for loop lagayera sabai array ko value read garem vaney tei value haru aauncha.</div>
+<div class="space5"></div>
+<div class="subtitle">Array laai yesari declare garda ni huncha:</div>
+<div class="code">
+  <pre>
+
+    int num[] = {1, 5, 7, 10, 6, 8}
+  </pre>
+</div>
+<div class="subtitle">Yesto chai hamle aafai value haru rakhney bela matra milcha. C ley chai automatically array ko length laai set gardincha. </div>
+<div class="space5"></div>
+<div class="topic">Array Elements in Memory</div>
+<div class="space5"></div>
+<div class="subtitle">Yo chai pachi pointers ma kaam laagcha. Array ko Memory Location vaneko saddhai ek aarko ko sangai huncha. Jastai maanam ki euta array cha num[] = {1, 2, 3, 4, 5}, ani maanam ki 1 ko memory location 100 ho.</div>
+<div class="code">
+  <table class="w3-table">
+    <tr>
+      <td class="subtitle">Element</td>
+      <td class="subtitle">num[0] = 1</td>
+      <td class="subtitle">num[1] = 2</td>
+      <td class="subtitle">num[2] = 3</td>
+      <td class="subtitle">num[3] = 4</td>
+      <td class="subtitle">num[4] = 5</td>
+    </tr>
+    <tr>
+      <td class="subtitle">Memory Location</td>
+      <td class="subtitle">100</td>
+      <td class="subtitle">101</td>
+      <td class="subtitle">102</td>
+      <td class="subtitle">103</td>
+      <td class="subtitle">104</td>
+    </tr>
+  </table>
+</div>
+<div class="subtitle">Yo kura tyesto important ta chaina tei ni dimag ma raakhirako ramro ahile laai.</div>
 </body>
 </html>
 
-<script>
-    // Script to open and close sidebar
-  
-    
-  
-    function w3_open() {
-      if(document.getElementById("mySidebar").style.display == "none") {
-        document.getElementById("mySidebar").style.display = "block";
-      } else {
-        document.getElementById("mySidebar").style.display = "none"
-      }
-    }
-  </script>
+<script src="script.js"></script>
