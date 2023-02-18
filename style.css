@@ -61,7 +61,7 @@
         
         
         /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-          @media screen and (min-width: 701px) {
+          @media screen and (min-width: 651px) {
           .subtitle {
             font-size: 20px;
             font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -80,7 +80,7 @@
         }
         
         /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 650px) {
           .subtitle {
             font-size: 16px;
             font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -169,7 +169,7 @@ a {
   padding-bottom: 50px;
 }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 651px) {
   .list {
     font-size: 24px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -178,7 +178,7 @@ a {
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
   .list {
     font-size: 16px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -199,7 +199,7 @@ pre{
 
 }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 651px) {
   .code {
     padding-left: 25px;
     padding-right: 250px;
@@ -207,7 +207,7 @@ pre{
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
   .code {
     padding-left: 25px;
     padding-right: 25px;
@@ -233,7 +233,7 @@ a.button:hover {
 }
 
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 651px) {
   .video {
     aspect-ratio: 16 / 9;
     width: 25%;
@@ -251,7 +251,7 @@ a.button:hover {
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
   .video {
     aspect-ratio: 16 / 9;
     width: 75%;
@@ -312,7 +312,7 @@ a.button:hover {
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 700px) and (min-width: 450px) {
+@media screen and (max-width: 650px) and (min-width: 450px) {
 
   .girl {
     padding-top: 50px;
@@ -355,7 +355,7 @@ a.button:hover {
   object-fit: cover;
 }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 651px) {
   .image {
     max-width: 5%;
     height: auto;
@@ -364,7 +364,7 @@ a.button:hover {
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
   .image {
     max-width: 15%;
     height: auto;
@@ -406,9 +406,9 @@ tr:nth-child(odd) {
   background-color: red;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
   .long-space{
-    padding-bottom: 50px;
+    padding-bottom: 10em;
   }
 
   .long-space2 {
@@ -420,9 +420,9 @@ tr:nth-child(odd) {
   }
 }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 651px) {
   .long-space{
-    padding-bottom: 425px;
+    padding-bottom: 15em;
   }
 
   .long-space2 {
@@ -435,13 +435,7 @@ tr:nth-child(odd) {
   opacity: 0;
   filter: blur(5px);
   transform: translateX(100%);
-  transition: all 1s;
-}
-
-@media(prefers-reduced-motion) {
-  .hidden {
-    transition: none;
-  }
+  transition: 1s;
 }
 
 .show {
@@ -450,7 +444,7 @@ tr:nth-child(odd) {
   transform: translateX(0);
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 650px) {
   .scroll {
     padding-bottom: 250px;
   }
