@@ -181,7 +181,7 @@
 </div>
 <div class="subtitle">Aba alikati example haru garam ani tyespachi array ko barema extra kura haru padhamla:</div>
 <div class="space5"></div>
-<div class="subtitle">Q. Twenty-five numbers are entered from keyboard into an array. The number to be searched is entered through the keyboard by the user. Write a program to find if the number to be searched is present in the array and if it is present, display the number of times it appears in the array. (Let Us C - Yashavant Kanetkar)</div>
+<div class="subtitle"><b>Q. Twenty-five numbers are entered from keyboard into an array. The number to be searched is entered through the keyboard by the user. Write a program to find if the number to be searched is present in the array and if it is present, display the number of times it appears in the array. (Let Us C - Yashavant Kanetkar)</b></div>
 <div class="space5"></div>
 <div class="subtitle">Pahila program lekhchu ani bujhaunchu:</div>
 <div class="code">
@@ -220,7 +220,7 @@
 <div class="space5"></div>
 <div class="subtitle">Second for loop ma chai heram aba. Pahila ta sabai array ko element haru laai access garna laai for loop intialize gariyo 0 dekhi 24 samma. Ani aba harek element ma check garney tyo search number sanga equal cha ki chaina vanera, ani equal cha vaney chai counter laai badhauney, chaina vaney ta kei garnai parena.</div>
 <div class="space5"></div>
-<div class="subtitle">Q. Write a program to find the greatest and smallest number in an array.</div>
+<div class="subtitle"><b>Q. Write a program to find the greatest and smallest number in an array.</b></div>
 <div class="code">
   <pre>
     #include &lt;stdio.h&gt;
@@ -307,6 +307,190 @@
   </table>
 </div>
 <div class="subtitle">Yo kura tyesto important ta chaina tei ni dimag ma raakhirako ramro ahile laai.</div>
+<div class="space5"></div>
+<div class="topic">Multi Dimensional Array</div>
+<div class="space5"></div>
+<div class="subtitle">Multi Dimensional Array vaneko euta array ko collection vanera bujhna milcha. Jastai ki Two-Dimensional Array vaneko One Dimensional Array ko Collection ho ani Three-Dimensional Array vaneko Two-Dimensional Array ko Collection ho. Tara hamle ahile Two-Dimensional Array ko barema matra bujhcham alikati.</div>
+<div class="space5"></div>
+<div class="subtitle">Two-Dimensional Array laai euta Matrix jastari ni herna milcha. La jastai euta matrix ligam ani tyeslai C Code ma raakham hai ta:</div>
+<div class="space5"></div>
+<div class="subtitle">Identity Matrix: </div>
+<div class="code">
+  <table class="w3-table" style="width: 40%">
+    <tr>
+      <td class="subtitle">1</td>
+      <td class="subtitle">0</td>
+    </tr>
+    <tr>
+      <td class="subtitle">0</td>
+      <td class="subtitle">1</td>
+    </tr>
+  </table>
+</div>
+<div class="subtitle">Aba hamle yo matrix ko element haru laai label ni garna sakcham:</div>
+<div class="code">
+  <table class="w3-table" style="width: 40%">
+    <tr>
+      <td class="subtitle">1 (0,0)</td>
+      <td class="subtitle">0 (0, 1)</td>
+    </tr>
+    <tr>
+      <td class="subtitle">0 (1, 0)</td>
+      <td class="subtitle">1 (1, 1)</td>
+    </tr>
+  </table>
+</div>
+<div class="subtitle">(Maile yesma 0,0 dekhi suru gareko tei vayera number haru yesto vaako)</div>
+<div class="space5"></div>
+<div class="topic">Initialization of a Two-Dimensional Array</div>
+<div class="space5"></div>
+<div class="subtitle">Aba C ma yo array kasto huncha heram:</div>
+<div class="code">
+  <pre>
+
+    #include &lt;stdio.h>
+
+    int main() {
+
+    int numbers[2][2] = {
+              {1, 0},
+              {0, 1}
+        };
+
+    return 0;
+    }
+  </pre>
+</div>
+<div class="subtitle">Tara yo matrai garna milcha vanney ni haina. Yo pani milcha:</div>
+<div class="code">
+  <pre>
+
+    int numbers[2][2] = {1, 0, 0, 1}
+  </pre>
+</div>
+<div class="subtitle">Tara yesma hamle read garna alli gaaro huncha.</div>
+<div class="space5"></div>
+<div class="subtitle">Euta kura chai 2D Array ma ke cha vaney, second dimension (column) chai declare garnai parcha, tara first dimension (row) chai optional ho. Jastai aba:</div>
+<div class="code">
+  <pre>
+
+    int arr[2][3] = {1, 2, 3, 4, 5, 6};
+    int arr[][3] = {1, 2, 3, 4, 5, 6};
+  </pre>
+</div>
+<div class="subtitle">Inaharu chai majjale milcha. Tara yo chai:</div>
+<div class="code">
+  <pre>
+
+    int arr[2][] = {1, 2, 3, 4, 5, 6};
+    int arr[][] = {1, 2, 3, 4, 5, 6};
+  </pre>
+</div>
+<div class="subtitle">Yesto lekhna mildaina.</div>
+<div class="space5"></div>
+<div class="topic">Accessing Data in a 2D Array</div>
+<div class="space5"></div>
+<div class="subtitle">Maile aginai banako table jastari nai access garna milcha hamro 2D Array laai.</div>
+<div class="code">
+  <table class="w3-table" style="width: 40%">
+    <tr>
+      <td class="subtitle">1 (0,0)</td>
+      <td class="subtitle">0 (0, 1)</td>
+    </tr>
+    <tr>
+      <td class="subtitle">0 (1, 0)</td>
+      <td class="subtitle">1 (1, 1)</td>
+    </tr>
+  </table>
+</div>
+<div class="subtitle"> Maanam ki yo array numbers vanney array ma store vaacha. Tyeso vaye maile numbers[0][0] haaley vaney 1 aauncha, numbers[0][1] haaley vaney 0 aauncha ani tyestai tyestai.</div>
+<div class="space5"></div>
+<div class="subtitle">Aba sabai elements display garna paryo vaney hamle for loop yesari use garna parcha:</div>
+<div class="code">
+  <pre>
+    #include &lt;stdio.h>
+
+    int main() {
+        int numbers[2][2] = {
+            {1, 0},
+            {0, 1}
+        };
+
+        for (int i = 0; i&lt;=1; i++) {
+            for (int j = 0; j&lt;=1; j++) {
+                printf("%d \n", numbers[i][j]);
+            }
+        }
+
+        return 0;
+
+    }
+  </pre>
+</div>
+<div class="subtitle">Aba yo chai nested for loop ko euta use case vayo.  Maile pahila ni vaneko hola nested loop kasari kaam garcha vanera. Aba yesma chai suru ma pahilo for loop ma enter vayo program ani tyo bela chai i = 0 vayo. Tyespachi second for loop ma gayo jasma feri j = 0 vayo. Tei vayera suru ma numbers[0][0] = 1 print huney vayo. Tyespachi aba tyo second for loop nai execute huney vayo kina vaney second for loop ko condition false vaako chaina. Aba i ko value ta change vaako chaina tei vayera i = 0 ani j = 1 huney vayo. Tei vayera numbers[0][1] = 0 print huney vayo. Tyespachi j ko loop sakkyo ani feri i ko loop ma jharyo jaha chai i ko value aba 1 vayo so i = 1. Ani aba feri j ko loop ma chiryo ani j ko value feri suru baata suru huncha tei vayera j = 0 huney vayo. Tei vayera numbers[1][0] = 0 print huney vayo. Ani feri j ko value badney vayo tei vayera i = 1 ani j = 1 huney vayo ani numbers[1][1] = 1 print huney vayo.</div>
+<div class="space5"></div>
+<div class="subtitle">That's it. Hamle aba 2D-Array ma input lina ni yestari nai garney ho:</div>
+<div class="code">
+  <pre>
+    
+    for (int i = 0; i&lt;=1; i++) {
+    for(int j = 0; j&lt;=1; j++) {
+        scanf("%d", &numbers[i][j]);
+    }
+  }
+  </pre>
+</div>
+<div class="subtitle">Aba 2D-Array ko euta question garam.</div>
+<div class="space5"></div>
+<div class="subtitle"><b>Q. Write a program to add two 3x3 Matrices</b></div>
+<div class="code">
+  <pre>
+    
+    #include &lt;stdio.h>
+
+      int main() {
+        int matrix_1[3][3], matrix_2[3][3], added_matrix[3][3];
+    
+        //Input the first matrix
+        printf("The First Matrix: ");
+        for (int i=0; i&lt;=2; i++) {
+            for (int j=0; j&lt;=2; j++) {
+                printf("\nEnter the element of (%d, %d): ", i, j);
+                scanf("%d", &matrix_1[i][j]);
+            }
+        }
+    
+        //Input the second matrix
+        printf("\n The Second Matrix:");
+        for (int i=0; i&lt;=2; i++) {
+            for(int j=0; j&lt;=2; j++) {
+                printf("\nEnter the element of (%d, %d):", i, j);
+                scanf("%d", &matrix_2[i][j]);
+            }
+        }
+    
+        //Calculate Result
+        for (int i=0; i&lt;=2; i++) {
+            for (int j=0; j&lt;=2; j++) {
+                added_matrix[i][j] = matrix_1[i][j] + matrix_2[i][j];
+            }
+        }
+    
+        //Display the Result
+        printf("The Added Matrix is: \n");
+        for (int i=0; i&lt;=2; i++) {
+            for (int j=0; j&lt;=2; j++) {
+                printf("%d | ", added_matrix[i][j]);
+            }
+            printf("\n");
+        }
+    
+        return 0;
+    
+      }
+  </pre>
+</div>
+<div class="subtitle">Aba yo program dekhda laamo hola tara maile sakey samma user friendly banauna khojeko vayera ho. Yesma chai aba suru ma duita matrix array haru laai input ligyo, ani sajilo hoss vanera maile index number ni lekhdiyeko chu tyehi printf ma (Program copy garera run garnu vayo vaney thaha paaunu huncha). Ani aba calculate garna ni thulo kura vayena just euta for loop ma duitai index ko value haru laai jodera third matrix ko tei index ma gayera raakhdiyesi last ma tyo third matrix laai display garesi hamro answer aayo!</div>
 </body>
 </html>
 
